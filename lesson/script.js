@@ -121,6 +121,17 @@ generateButton.addEventListener("click", function () {
 // 3. Set each input's .value to ""
 // 4. Clear the story output too
 
+let clearBtn = document.querySelector("#clear");
+
+clearBtn.addEventListener("click", function () {
+  document.querySelector("#name").value = "";
+  document.querySelector("#adjective").value = "";
+  document.querySelector("#noun").value = "";
+  document.querySelector("#verb").value = "";
+  document.querySelector("#place").value = "";
+  document.querySelector("#number").value = "";
+});
+
 // STRETCH 3: Use Number() with the number input
 // Hint: let days = Number(number);
 // Then calculate something fun, like hours: let hours = days * 24;
