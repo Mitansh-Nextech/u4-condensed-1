@@ -11,7 +11,6 @@
 //
 // ============================================================
 
-
 // ************************************************************
 // WE DO TOGETHER - Part 1: Grab the button
 // ************************************************************
@@ -20,14 +19,12 @@
 
 let generateButton = document.querySelector("#generate");
 
-
 // ************************************************************
 // WE DO TOGETHER - Part 2: Listen for clicks
 // ************************************************************
 // Now we tell the button: "When someone clicks you, run this code"
 
-generateButton.addEventListener("click", function() {
-
+generateButton.addEventListener("click", function () {
   // **********************************************************
   // WE DO TOGETHER - Part 3: Read the first few inputs
   // **********************************************************
@@ -43,7 +40,6 @@ generateButton.addEventListener("click", function() {
   console.log("Adjective:", adjective);
   console.log("Noun:", noun);
 
-
   // **********************************************************
   // WE DO TOGETHER - Part 4: Build the first sentence
   // **********************************************************
@@ -55,11 +51,9 @@ generateButton.addEventListener("click", function() {
   // Display it on the page using innerHTML
   document.querySelector("#story").innerHTML = firstSentence;
 
-
   // ============================================================
   // YOUR TURN! Follow the same pattern to finish the story.
   // ============================================================
-
 
   // **********************************************************
   // YOUR TURN - Step 1: Read the remaining inputs
@@ -70,16 +64,20 @@ generateButton.addEventListener("click", function() {
 
   // Your code here:
 
-
+  let verb = document.querySelector("#verb").value;
+  let place = document.querySelector("#place").value;
+  let number = document.querySelector("#number").value;
 
   // **********************************************************
   // YOUR TURN - Step 2: Log your new variables
   // **********************************************************
   // Use console.log() to check your values, just like we did above
 
+  console.log("Verb: ", verb);
+  console.log("Place: ", place);
+  console.log("Number: ", number);
+
   // Your code here:
-
-
 
   // **********************************************************
   // YOUR TURN - Step 3: Build the complete story
@@ -96,7 +94,7 @@ generateButton.addEventListener("click", function() {
 
   // Your code here (replace firstSentence with your full story):
 
-
+  let fullStory = `Deep inside the codebase lives a ${adjective} bug that's been hiding for ${number} days. ${name} grabs their debugger and ventures into ${place} to hunt it down, only to discover the bug can ${verb} and has been disguising itself as an innocent ${noun} the whole time.`;
 
   // **********************************************************
   // YOUR TURN - Step 4: Display the complete story
@@ -105,10 +103,8 @@ generateButton.addEventListener("click", function() {
   // (You might have already done this in Step 3 - that's fine!)
 
   // Your code here:
-
-
+  document.querySelector("#story").innerHTML = fullStory;
 });
-
 
 // ============================================================
 // STRETCH GOALS (if you finish early!)
@@ -118,14 +114,12 @@ generateButton.addEventListener("click", function() {
 // Hint: Check if name === "" || adjective === "" || ... etc.
 // If any are empty, set innerHTML to a helpful message and use "return;"
 
-
 // STRETCH 2: Make the Clear button work
 // Hint: You'll need to:
 // 1. Select the clear button with querySelector
 // 2. Add a click event listener
 // 3. Set each input's .value to ""
 // 4. Clear the story output too
-
 
 // STRETCH 3: Use Number() with the number input
 // Hint: let days = Number(number);
